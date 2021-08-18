@@ -1,15 +1,21 @@
 import React from "react";
-import rigoImage from "../../img/rigo-baby.jpg";
+import fondo from "../../img/fondo.jpg";
 import "../../styles/home.scss";
+import logo3 from "../../img/logo3.png";
+import { Link } from "react-router-dom";
 
-export const Home = () => (
-	<div className="text-center mt-5">
-		<h1>Hello Rigo!</h1>
-		<p>
-			<img src={rigoImage} />
-		</p>
-		<a href="#" className="btn btn-success">
-			If you see this green button, bootstrap is working
-		</a>
-	</div>
-);
+export const Home = () => {
+	return (
+		<>
+			<Link to="/personajes">
+				<img src={logo3} style={{ marginLeft: "20px", width: "80px", height: "40px" }} />
+			</Link>
+			<Link to="/planetas">
+				<img src={logo3} style={{ marginLeft: "20px", width: "80px", height: "40px" }} />
+			</Link>
+			<Link to="/naves">
+				<img src={logo3} style={{ marginLeft: "20px", width: "80px", height: "40px" }} />
+			</Link>
+		</>
+	);
+};
